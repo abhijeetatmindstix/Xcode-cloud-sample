@@ -15,5 +15,10 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/jenkins-integration']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/abhijeetatmindstix/sample-ios-pipeline.git']]])
             }
         }
+        stage('Install Dependencies') {
+            steps {
+                sh 'bundle install'
+            }
+        }
     }
 }

@@ -20,11 +20,6 @@ pipeline {
                 sh 'bundle install'
             }
         }
-        stage('Install Dependencies') {
-            steps {
-                sh 'bundle install'
-            }
-        }
         stage('Run Tests') {
             steps {
                 sh 'bundle exec fastlane test'

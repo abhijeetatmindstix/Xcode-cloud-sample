@@ -1,11 +1,6 @@
 // node {
 // sh ‘echo HelloWorld’
 // }
-
-
-
-
-
 pipeline {
     agent any
 
